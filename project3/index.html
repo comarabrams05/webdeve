@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
 <title>Music Player</title>
 
@@ -7,20 +7,36 @@
 body {
   background: url("./images/hello.jpg");
   background-size: cover;
+  color: white;
+  text-align: center;
 }
 
 #cp {
   margin: 0 auto;
   width: 800px;
-  margin-top: 200px;
+  margin-top: 100px;
 }
+
 button {
-  background-color: #D4BBEE;
+  background-color: #7c4dcc;
   padding: 10px;
-  font-size: 12px;
+  font-size: 14px;
   border: none;
-  width: 100px;
-  border-radius: 75%;
+  width: 120px;
+  margin: 5px;
+  border-radius: 25px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #5d34a3;
+}
+
+#message {
+  margin-top: 20px;
+  font-size: 18px;
   font-weight: bold;
 }
 </style>
@@ -35,6 +51,7 @@ function goBackToMenu() {
 </head>
 
 <body>
+
 <div id="cp">
   <button id="play">Play</button>
   <button id="pause">Pause</button>
@@ -47,9 +64,10 @@ function goBackToMenu() {
   <p id="message">Waiting...</p>
 </div>
 
+<br>
+
 <button onclick="goBackToMenu()">Back to Main Menu</button>
 
-  
 <audio id="player">
   <source src="./music/song1.mp3" type="audio/mpeg">
 </audio>
